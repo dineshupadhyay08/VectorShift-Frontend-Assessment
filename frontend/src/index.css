@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: #0f172a; /* dark slate */
+  color: #e5e7eb;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 25px 20px;
+  background: linear-gradient(180deg, #0f1645, #08185e);
+  border-bottom: 1px solid #1f2937;
+}
+
+/* ===== NAV ITEM ===== */
+.nav-item {
+  position: relative;
+  font-size: 16px;
+  font-weight: 500;
+  color: #c7d2fe;
+
+  cursor: grab;
+  user-select: none;
+
+  padding: 3px 0;
+}
+
+/* ===== UNDERLINE ===== */
+.nav-underline {
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+
+  width: 100%;
+  height: 2px;
+
+  background: linear-gradient(90deg, #6366f1, #3b82f6);
+  border-radius: 2px;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+/* ===== HOVER EFFECT ===== */
+.nav-item:hover {
+  color: #ffffff;
+}
+
+.nav-item:hover .nav-underline {
+  transform: scaleX(1);
+}
+
+/* ===== DRAG FEEDBACK ===== */
+.nav-item:active {
+  cursor: grabbing;
+}
+
+/* ===== BASE NODE ===== */
+.base-node {
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  padding: 12px;
+  width: 220px;
+
+  color: #e5e7eb;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.2s ease;
+}
+
+/* ===== NODE TITLE ===== */
+.node-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #93c5fd;
+
+  padding-bottom: 6px;
+  margin-bottom: 10px;
+
+  border-bottom: 1px solid #334155;
+}
+
+/* ===== NODE BODY ===== */
+.node-body {
+  background: #020617; /* pehle se lighter black */
+  border-radius: 8px;
+  padding: 10px;
+
+  font-size: 13px;
+}
+
+/* ===== HANDLES ===== */
+.node-handle {
+  background: #6366f1;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
